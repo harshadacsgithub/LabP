@@ -1,0 +1,128 @@
+public class FIRST{
+ public static void evenNumber(Integer num){
+       if(Math.mod(num,2)==0)
+       {
+           System.debug('Even Number');
+       }
+       else
+       {
+             System.debug('Odd Number');
+            
+       }
+        
+    }   
+}
+
+____________________________________________________________________________________
+
+public class PrimeNumberChecker 
+{
+	 public static void findPrime(Integer num)
+    {
+		Integer flag=0;
+        Integer j=2;
+        while(j<num)
+        {
+            if(Math.mod(num,j)==0)
+            {
+                flag=1;
+                break;
+            }
+        
+        	j++;
+        }
+    
+        if(flag==0 && num>1)
+        {
+            System.debug(num+' is a prime number');
+        }
+        else{
+            System.debug(num+' is not a prime number');
+        }
+    }
+
+}
+________________________________________________________________________________
+
+public class PrimeNumber {
+    public static void findPrimeNumber(Integer ll, Integer ul)
+    {
+        for(Integer i=ll;i<ul;i++)
+        {
+            Boolean isPrime=true;
+            for(Integer j=2;j<=Math.sqrt(i);j++)
+            {
+                if(Math.mod(i,j)==0){
+                    isPrime=false;
+                    break;
+                }
+            }
+            if(isPrime && i>1){
+                System.debug(i);
+            }
+        }
+    }
+}
+_________________________________________________________________________________________
+
+Bubble sort
+public class my {
+    public static void main() {
+        List<Integer> listOfValues = new List<Integer>{4, 9, 2, 7, 6, 3, 8, 0, 5, 1};
+        Integer iterationSize = listOfValues.size();
+
+        for (Integer y = 0; y < listOfValues.size(); y++) {
+            Boolean swapped = false; // Track to see if this pass had any swapped values
+            for (Integer x = 0; x < iterationSize; x++) {
+                if (x + 1 == listOfValues.size()) break;
+                // If this value and the next value are out of order, swap the values
+                if (listOfValues.get(x) > listOfValues.get(x + 1)) {
+                    Integer swapVal = listOfValues.get(x);
+                    swapped = true;
+                    listOfValues.set(x, listOfValues.get(x + 1));
+                    listOfValues.set(x + 1, swapVal);
+                }
+                System.debug('Iteration List == ' + JSON.serialize(listOfValues));
+            }
+            iterationSize--;
+            System.debug('SWAPPED == ' + swapped);
+            System.debug(JSON.serialize(listOfValues));
+            if (swapped) { y = listOfValues.size(); }
+        }
+        // If there were no swapped values in the pass, then the list is sorted
+        System.debug('Final List of Values == ' + JSON.serialize(listOfValues));
+    }
+}
+_________________________________________________________________________________________
+
+public class Stud {
+
+	public static void demo (Integer key){
+	System.debug('Linear Search');
+	integer s =-1;
+	List<integer> lon = new List<integer> ();
+	lon.add(3);
+	lon.add(4);
+	lon.add(5);	
+	lon.add(6);
+	System.debug('List: '+lon);
+	for(integer i=0; i < lon.size(); i++)
+    {
+        if (key == lon[i])
+		{
+			s = 1;
+		}
+    }
+	if (s == 1)
+	{
+
+		System.debug('Element Found');
+    }
+	else
+	{
+
+		System.debug('Element Not Found');	
+    }
+    }
+
+}
